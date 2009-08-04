@@ -11,6 +11,7 @@ URL:       http://code.google.com/p/ibus/
 Source0:   http://ibus.googlecode.com/files/ibus-qt-%{version}-Source.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	qt4-devel >= 4.4
+BuildRequires:	dbus-devel
 BuildRequires:	cmake
 Requires:	ibus >= 1.2.0
 
