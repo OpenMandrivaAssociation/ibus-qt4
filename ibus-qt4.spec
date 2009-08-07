@@ -30,10 +30,14 @@ This package contains qt4 input method plugin.
 rm -rf %buildroot
 %makeinstall_std -C build
 
+rm -fr %buildroot%_libdir/libibus-qt.so
+rm -fr %buildroot%_datadir/doc
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%{_libdir}/libibus-qt.so
+%doc AUTHORS README
+%{_libdir}/libibus-qt.so.*
 %{qt4plugins}/inputmethods/libqtim-ibus.so
