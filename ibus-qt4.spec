@@ -27,7 +27,7 @@ This package contains qt4 input method plugin.
 %patch0 -p0
 
 %build
-%cmake_qt4
+%cmake_qt4 -DLIBDIR="%_libdir"
 %make
 
 %install
