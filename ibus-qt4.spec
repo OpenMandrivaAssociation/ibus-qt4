@@ -9,10 +9,13 @@ Group:     System/Internationalization
 License:   GPLv2+
 URL:       http://code.google.com/p/ibus/
 Source0:   http://ibus.googlecode.com/files/ibus-qt-%{version}-Source.tar.gz
+Patch0:    ibus-qt-1.2.0.20091014-link.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	qt4-devel >= 4.4
 BuildRequires:	dbus-devel
 BuildRequires:	cmake
+BuildRequires:	icu-devel
+BuildRequires:	ibus-devel >= 1.2.0
 Requires:	ibus >= 1.2.0
 
 %description
@@ -21,9 +24,10 @@ This package contains qt4 input method plugin.
 
 %prep
 %setup -q -n ibus-qt-%{version}-Source
+%patch0 -p0
 
 %build
-%cmake_qt4 -DLIBDIR="%_libdir"
+%cmake_qt4
 %make
 
 %install
@@ -32,6 +36,7 @@ rm -rf %buildroot
 
 rm -fr %buildroot%_libdir/libibus-qt.so
 rm -fr %buildroot%_datadir/doc
+rm -fr %buildroot%_includedir/ibus-qt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
