@@ -16,11 +16,20 @@ BuildRequires:	dbus-devel
 BuildRequires:	cmake
 BuildRequires:	icu-devel
 BuildRequires:	ibus-devel >= 1.2.0
+BuildRequires:	doxygen
 Requires:	ibus >= 1.2.0
 
 %description
 IBus is a next generation input framework.
 This package contains qt4 input method plugin.
+
+%package devel
+Group: System/Internationalization
+Summary: Development files for ibus-qt
+Requires: %name = %version
+
+%description devel
+This package contains development files for ibus-qt.
 
 %prep
 %setup -q -n ibus-qt-%{version}-Source
@@ -34,9 +43,7 @@ This package contains qt4 input method plugin.
 rm -rf %buildroot
 %makeinstall_std -C build
 
-rm -fr %buildroot%_libdir/libibus-qt.so
 rm -fr %buildroot%_datadir/doc
-rm -fr %buildroot%_includedir/ibus-qt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,3 +53,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README
 %{_libdir}/libibus-qt.so.*
 %{qt4plugins}/inputmethods/libqtim-ibus.so
+
+%files devel
+%defattr(-,root,root)
+%doc build/docs/html/*
+%{_mandir}/man3/*
+%{_includedir}/ibus-qt
+%{_libdir}/*.so
