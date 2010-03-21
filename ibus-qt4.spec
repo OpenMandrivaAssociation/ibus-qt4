@@ -1,5 +1,5 @@
 %define	version 1.2.0.20091216
-%define	release %mkrel 1
+%define	release %mkrel 2
 
 Name:      ibus-qt4
 Summary:   ibus qt4 input method plugin
