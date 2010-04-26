@@ -1,5 +1,5 @@
-%define	version 1.2.0.20091216
-%define	release %mkrel 2
+%define	version 1.3.0
+%define	release %mkrel 1
 
 Name:      ibus-qt4
 Summary:   ibus qt4 input method plugin
@@ -15,9 +15,9 @@ BuildRequires:	qt4-devel >= 4.4
 BuildRequires:	dbus-devel
 BuildRequires:	cmake
 BuildRequires:	icu-devel
-BuildRequires:	ibus-devel >= 1.2.0
+BuildRequires:	ibus-devel >= 1.3.0
 BuildRequires:	doxygen
-Requires:	ibus >= 1.2.0
+Requires:	ibus >= 1.3.0
 
 %description
 IBus is a next generation input framework.
@@ -56,7 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(-,root,root)
-%doc build/docs/html/*
-%{_mandir}/man3/*
 %{_includedir}/ibus-qt
 %{_libdir}/*.so
