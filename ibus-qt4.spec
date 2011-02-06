@@ -1,5 +1,5 @@
-%define	version 1.3.0
-%define	release %mkrel 2
+%define	version 1.3.1
+%define	release %mkrel 1
 
 Name:      ibus-qt4
 Summary:   ibus qt4 input method plugin
@@ -9,7 +9,6 @@ Group:     System/Internationalization
 License:   GPLv2+
 URL:       http://code.google.com/p/ibus/
 Source0:   http://ibus.googlecode.com/files/ibus-qt-%{version}-Source.tar.gz
-Patch0:    ibus-qt-1.2.0.20091014-link.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	qt4-devel >= 4.4
 BuildRequires:	dbus-devel
@@ -33,7 +32,6 @@ This package contains development files for ibus-qt.
 
 %prep
 %setup -q -n ibus-qt-%{version}-Source
-%patch0 -p0
 
 %build
 %cmake_qt4 -DLIBDIR="%_libdir"
