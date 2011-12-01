@@ -44,7 +44,7 @@ rm -rf %buildroot
 rm -fr %buildroot%_datadir/doc
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
