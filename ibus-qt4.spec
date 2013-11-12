@@ -6,6 +6,7 @@ Group:		System/Internationalization
 License:	GPLv2+
 URL:		http://code.google.com/p/ibus/
 Source0:	http://ibus.googlecode.com/files/ibus-qt-%{version}-Source.tar.gz
+Source1:	ibus-qt4.rpmlintrc
 BuildRequires:	qt4-devel >= 4.4
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	cmake
