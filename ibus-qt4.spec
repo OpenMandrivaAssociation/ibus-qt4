@@ -5,7 +5,7 @@
 Summary:	ibus qt4 input method plugin
 Name:		ibus-qt4
 Version:	1.3.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Internationalization
 Url:		http://code.google.com/p/ibus/
