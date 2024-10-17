@@ -8,7 +8,7 @@ Version:	1.3.2
 Release:	2
 License:	GPLv2+
 Group:		System/Internationalization
-Url:		http://code.google.com/p/ibus/
+Url:		https://code.google.com/p/ibus/
 Source0:	http://ibus.googlecode.com/files/ibus-qt-%{version}-Source.tar.gz
 BuildRequires:	cmake
 BuildRequires:	doxygen
